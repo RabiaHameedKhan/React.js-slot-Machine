@@ -10,9 +10,11 @@ body {
   background-color: #f0f8ff;
   font-family: 'Poppins', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 h1 {
@@ -39,12 +41,14 @@ hr {
   margin: 10px auto;
   border-radius: 12px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
 }
 
 .slot_inner h1 {
   font-size: 2.5rem;
+  word-break: break-word;
 }
 
 .slot_inner p {
@@ -53,3 +57,41 @@ hr {
   margin-top: 10px;
 }
 
+/* --------- Responsive Design --------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .slot_inner {
+    padding: 15px 20px;
+    max-width: 90%;
+  }
+
+  .slot_inner h1 {
+    font-size: 2rem;
+  }
+
+  .slot_inner p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .slot_inner {
+    padding: 10px 15px;
+    max-width: 95%;
+  }
+
+  .slot_inner h1 {
+    font-size: 1.8rem;
+  }
+
+  .slot_inner p {
+    font-size: 0.9rem;
+  }
+}
